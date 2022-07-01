@@ -2,7 +2,8 @@
     <property file="${basedir}/build.properties" />
     <target name="broker-war-build">
         <exec dir="${basedir}/../../broker"
-              executable="sh /var/jenkins_home/maven/bin/mvn -s /var/jenkins_home/maven/conf/settings-docker.xml package -Dmaven.test.skip=true">
+              executable="sh">
+            <arg value="/var/jenkins_home/maven/bin/mvn -s /var/jenkins_home/maven/conf/settings-docker.xml package -Dmaven.test.skip=true"></arg>
         </exec>
 
         <copy file="${basedir}/../../broker/target/broker.jar"
