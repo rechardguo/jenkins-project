@@ -1,0 +1,11 @@
+<project name="broker-war-build" default="broker-war-build" basedir=".">
+    <property file="${basedir}/build.properties" />
+    <target name="broker-war-build">
+        <exec dir="${basedir}/../../broker" executable="sh">
+            <arg line="/c mvn package -Dmaven.test.skip=true" />
+        </exec>
+
+        <copy file="${basedir}/../../broker/target/ssm.war"
+              todir="${basedir}../broker"/>
+    </target>
+</project>
