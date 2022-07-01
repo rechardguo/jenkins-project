@@ -5,7 +5,7 @@
             <arg line="/c mvn package -Dmaven.test.skip=true" />
         </exec>
 
-        <copy file="${basedir}/../../broker/target/ssm.war"
-              todir="${basedir}../broker"/>
+        <copy file="${basedir}/../../broker/target/broker.jar"
+              todir="${basedir}/../broker"/>
     </target>
 </project>
