@@ -1,7 +1,8 @@
 <project name="broker-war-build" default="broker-war-build" basedir=".">
     <property file="${basedir}/build.properties" />
     <target name="broker-war-build">
-        <exec dir="${basedir}/../../broker" executable="mvn package -Dmaven.test.skip=true">
+        <exec dir="${basedir}/../../broker"
+              executable="/var/jenkins_home/mvn package -Dmaven.test.skip=true">
         </exec>
 
         <copy file="${basedir}/../../broker/target/broker.jar"
