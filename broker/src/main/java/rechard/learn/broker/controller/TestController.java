@@ -1,6 +1,7 @@
 package rechard.learn.broker.controller;
 
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -9,8 +10,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class TestController {
 
-    @PostMapping("/test")
+    @RequestMapping("/test")
     public String test(){
-        return "test v1.0.2";
+        return "test v1.0.7";
     }
 }
