@@ -1,5 +1,4 @@
-FROM openjdk:latest
-
-COPY broker.jar /usr/src/broker.jar
-
-CMD java -jar /usr/src/broker.jar
+FROM adoptopenjdk/openjdk8
+COPY broker.jar /usr/local/
+WORKDIR /usr/local/
+CMD java -jar broker.jar
