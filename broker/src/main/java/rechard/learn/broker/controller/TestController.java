@@ -12,6 +12,6 @@ public class TestController {
 
     @RequestMapping("/test")
     public String test(){
-        return "test v1.1.3";
+        return "test v1.1.4";
     }
 }
