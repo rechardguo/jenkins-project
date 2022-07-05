@@ -4,13 +4,13 @@ pipeline {
              stage('build package') {
                    steps {
                      withAnt(installation: 'ant') {
-                        sh 'ant -f /var/jenkins_home/workspace/test2/docker/build-script/build.xml'
+                        sh 'ant -f /var/jenkins_home/workspace/$JOB_NAME/docker/build-script/build.xml'
                      }
                    }
                }
                stage('build image') {
                    steps {
-                       sh 'docker build -t broker:${tag} /var/jenkins_home/workspace/test2/docker/broker'
+                       sh 'docker build -t broker:${tag} /var/jenkins_home/workspace/$JOB_NAME/docker/broker'
                    }
                }
                stage('push image') {
